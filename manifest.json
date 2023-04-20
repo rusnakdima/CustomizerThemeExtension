@@ -1,0 +1,33 @@
+{
+  "name": "Customizer theme",
+  "description": "Theme customizing on any site",
+  "author": "DmitriyDev Studio Company",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting", "tabs", "storage"],
+
+  "action":{
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/icon.png",
+      "32": "/icon.png",
+      "48": "/icon.png",
+      "128": "/icon.png"
+    }
+  },
+
+  "icons": {
+    "16": "/icon.png",
+    "32": "/icon.png",
+    "48": "/icon.png",
+    "128": "/icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": [ "popup.js" ]
+    }
+  ]
+}
